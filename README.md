@@ -23,3 +23,4 @@ This project contains a Django management command to automate the import of TSV 
 git clone https://github.com/rmazroey/Instructure-Canvas-Data-2-.git
 cd Instructure-Canvas-Data-2-
 
+
