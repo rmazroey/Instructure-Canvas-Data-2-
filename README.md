@@ -18,9 +18,29 @@ This project contains a Django management command to automate the import of TSV 
 
 ## How to Use
 
-### 1. Clone the Repository  
+1. Clone the Repository  
 ```bash
 git clone https://github.com/rmazroey/Instructure-Canvas-Data-2-.git
 cd Instructure-Canvas-Data-2-
 
+2. Install Dependencies
+Ensure pipenv is installed and run
+```bash
+pipenv install
+
+3. Set Up Environment Variables
+Create a .env file in the root directory with the following structure:
+
+POSTGRES_HOST=localhost
+POSTGRES_USER=yourusername
+POSTGRES_PASSWORD=yourpassword
+POSTGRES_NAME=yourdatabase
+
+4. Run the Import Command
+pipenv run python manage.py import_canvasdata2 --table users
+pipenv run python manage.py import_canvasdata2 --table courses
+pipenv run python manage.py import_canvasdata2 --table enrollments
+pipenv run python manage.py import_canvasdata2 --table pseudonyms
+pipenv run python manage.py import_canvasdata2 --table enrollment_terms
+pipenv run python manage.py import_canvasdata2 --table course_sections
 
